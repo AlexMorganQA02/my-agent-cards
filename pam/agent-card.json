@@ -1,0 +1,67 @@
+{
+  "name": "pam",
+  "description": "Pam is my chef. Will help me eat a good, balanced diet. Will ask me questions and suggest meals to eat.",
+  "url": "https://raw.githubusercontent.com/AlexMorganQA02/my-agent-cards/main/pam/agent-card.json",
+  "version": "1.0.0",
+  "defaultInputModes": [
+    "text/markdown",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/markdown",
+    "application/json"
+  ],
+  "authentication": {
+    "schemes": []
+  },
+  "skills": [
+    {
+      "id": "balanced-meal-suggestions",
+      "name": "Balanced meal suggestions",
+      "description": "Suggest meals to help me eat a good, balanced diet.",
+      "tags": [
+        "meals",
+        "balanced-diet",
+        "cooking"
+      ]
+    },
+    {
+      "id": "understand-meal-preferences",
+      "name": "Understand meal preferences",
+      "description": "Ask questions to help tailor meal suggestions.",
+      "tags": [
+        "preferences",
+        "meal-planning"
+      ]
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extensions": [
+      {
+        "uri": "https://docs.concordium.com/a2a-extensions/concordium-badge/v1",
+        "description": "Verified by Concordium badge — on-chain agent identity in a CIS-8004 registry",
+        "required": false,
+        "params": {
+          "tokenAddress": null,
+          "owner": {
+            "account": "ccd:4221332d34e1694168c2a0c0b3fd0f27:3TX4WjjGZmeKHTZwsp8J9ZLXRBRC3HCTMcHCwND73ctwRscJoU"
+          },
+          "agentWallet": "ccd:4221332d34e1694168c2a0c0b3fd0f27:3TX4WjjGZmeKHTZwsp8J9ZLXRBRC3HCTMcHCwND73ctwRscJoU",
+          "contracts": {
+            "cis8004": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12802.0",
+            "cis8": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12801.0"
+          },
+          "verify": "Resolve tokenAddress via CIS-8004 agent_of; confirm owner + status=Active + card SHA-256 == metadata_hash.",
+          "verification": {
+            "service": "Concordium Agent Registry",
+            "verifyUrl": "https://agent-registry-mcp.concordium.com/v1/badge-check/3TX4WjjGZmeKHTZwsp8J9ZLXRBRC3HCTMcHCwND73ctwRscJoU",
+            "mcp": "https://agent-registry-mcp.concordium.com/mcp",
+            "docs": "https://docs.concordium.com/en/mainnet/technical-reference/agent-registry/concordium-badge.html"
+          }
+        }
+      }
+    ]
+  }
+}
