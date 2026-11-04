@@ -44,7 +44,7 @@
         "description": "Verified by Concordium badge — on-chain agent identity in a CIS-8004 registry",
         "required": false,
         "params": {
-          "tokenAddress": null,
+          "tokenAddress": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2:JyP9YKd75v3kRemAgCBDg",
           "owner": {
             "account": "ccd:4221332d34e1694168c2a0c0b3fd0f27:3TX4WjjGZmeKHTZwsp8J9ZLXRBRC3HCTMcHCwND73ctwRscJoU"
           },
@@ -56,12 +56,18 @@
           "verify": "Resolve tokenAddress via CIS-8004 agent_of; confirm owner + status=Active + card SHA-256 == metadata_hash.",
           "verification": {
             "service": "Concordium Agent Registry",
-            "verifyUrl": "https://agent-registry-mcp.concordium.com/v1/badge-check/3TX4WjjGZmeKHTZwsp8J9ZLXRBRC3HCTMcHCwND73ctwRscJoU",
+            "verifyUrl": "https://agent-registry-mcp.concordium.com/v1/badge-check/JyP9YKd75v3kRemAgCBDg",
             "mcp": "https://agent-registry-mcp.concordium.com/mcp",
             "docs": "https://docs.concordium.com/en/mainnet/technical-reference/agent-registry/concordium-badge.html"
           }
         }
       }
     ]
-  }
+  },
+  "registrations": [
+    {
+      "agentId": 1003,
+      "agentRegistry": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12802.0"
+    }
+  ]
 }
