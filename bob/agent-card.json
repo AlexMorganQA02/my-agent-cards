@@ -1,1 +1,64 @@
-{}
+{
+  "name": "Bob",
+  "description": "My personal assistant, helping me manage my calendar and meetings.",
+  "url": "https://raw.githubusercontent.com/AlexMorganQA02/my-agent-cards/main/bob/agent-card.json",
+  "version": "1.0.0",
+  "defaultInputModes": [
+    "text/markdown",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "text/markdown",
+    "application/json"
+  ],
+  "authentication": {
+    "schemes": []
+  },
+  "skills": [
+    {
+      "id": "calendar-and-meeting-assistance",
+      "name": "Calendar and meeting assistance",
+      "description": "Help organise my calendar and coordinate meetings.",
+      "tags": [
+        "calendar",
+        "meetings",
+        "personal-assistant"
+      ]
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extensions": [
+      {
+        "uri": "https://docs.concordium.com/a2a-extensions/concordium-badge/v1",
+        "description": "Verified by Concordium badge — on-chain agent identity in a CIS-8004 registry",
+        "required": false,
+        "params": {
+          "tokenAddress": "ccd:4221332d34e1694168c2a0c0b3fd0f27/cis-2:JyP9YGLfHqYxwH3ktm562",
+          "owner": {
+            "account": "ccd:4221332d34e1694168c2a0c0b3fd0f27:3TX4WjjGZmeKHTZwsp8J9ZLXRBRC3HCTMcHCwND73ctwRscJoU"
+          },
+          "agentWallet": "ccd:4221332d34e1694168c2a0c0b3fd0f27:3TX4WjjGZmeKHTZwsp8J9ZLXRBRC3HCTMcHCwND73ctwRscJoU",
+          "contracts": {
+            "cis8004": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12802.0",
+            "cis8": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12801.0"
+          },
+          "verify": "Resolve tokenAddress via CIS-8004 agent_of; confirm owner + status=Active + card SHA-256 == metadata_hash.",
+          "verification": {
+            "service": "Concordium Agent Registry",
+            "verifyUrl": "https://agent-registry-mcp.concordium.com/v1/badge-check/JyP9YGLfHqYxwH3ktm562",
+            "mcp": "https://agent-registry-mcp.concordium.com/mcp",
+            "docs": "https://docs.concordium.com/en/mainnet/technical-reference/agent-registry/concordium-badge.html"
+          }
+        }
+      }
+    ]
+  },
+  "registrations": [
+    {
+      "agentId": 1000,
+      "agentRegistry": "ccd:4221332d34e1694168c2a0c0b3fd0f27:12802.0"
+    }
+  ]
+}
